@@ -22,17 +22,17 @@ const Products = () => {
   const [products, setProducts] = useState([
     {
       id: 1,
-      name: 'Lakmé Lipstick',
-      price: 450,
-      quantity: 10,
-      brand: 'Lakmé'
+      name: 'Huda Foundation',
+      price: 3500,
+      quantity: 1,
+      brand: 'Huda Beauty',
     },
     {
       id: 2,
-      name: 'Maybelline Foundation',
-      price: 799,
-      quantity: 5,
-      brand: 'Maybelline'
+      name: 'Huda Eyeshades',
+      price: 7999,
+      quantity: 2,
+      brand: 'Huda Beauty'
     }
   ]);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -92,7 +92,7 @@ const Products = () => {
   return (
     <div style={{ padding: 24 }}>
       <h2 style={{ textAlign: 'center' }}>Sasto Bajar</h2>
-      <h3 style={{ textAlign: 'center' }}>Makeup Product Management</h3>
+      <h3 style={{ textAlign: 'center' }}>Product Management</h3>
       <div style={{ textAlign: 'center', marginBottom: 16 }}>
         <Button type="primary" onClick={() => showModal()}>+ Add Product</Button>
       </div>
@@ -106,7 +106,7 @@ const Products = () => {
       >
         <Form form={form} layout="vertical">
           <Form.Item name="name" label="Product Name" rules={[{ required: true }]}>
-            <Input placeholder="e.g. Lipstick, Foundation" />
+            <Input placeholder="e.g. Huda Beauty, Foundation" />
           </Form.Item>
           <Form.Item name="price" label="Price (Rs.)" rules={[{ required: true }]}>
             <InputNumber min={0} style={{ width: '100%' }} />
@@ -115,7 +115,7 @@ const Products = () => {
             <InputNumber min={0} style={{ width: '100%' }} />
           </Form.Item>
           <Form.Item name="brand" label="Brand Name" rules={[{ required: true }]}>
-            <Input placeholder="e.g. Lakmé, Maybelline" />
+            <Input placeholder="e.g. Huda Beauty,EyeShades" />
           </Form.Item>
         </Form>
       </Modal>
