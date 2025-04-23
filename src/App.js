@@ -249,6 +249,9 @@ import Home from './pages/Home';
 import Products from './pages/Products';
 import Cart from './pages/cart';
 import Contact from './pages/contact';
+import LogIn from './pages/LogIn';
+import LogOut from './pages/LogOut';
+import Dashboard from './pages/Dashboard';
 import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
 
 const { Header, Content } = Layout;
@@ -275,6 +278,9 @@ const App = () => {
               <Route path="/products" element={<Products />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/login" element={<LogIn />} />
+              <Route path="/logout" element={<LogOut />} />
+              <Route path="/dashboard" element={<Dashboard />} />
             </Routes>
           </Content>
         </Layout>

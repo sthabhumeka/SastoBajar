@@ -43,8 +43,12 @@ import {
   ShopOutlined,
   ShoppingCartOutlined,
   PhoneOutlined,
+  DashboardOutlined,
+  LoginOutlined,
+  LogoutOutlined,
 } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
+
 
 const { Sider } = Layout;
 
@@ -55,6 +59,9 @@ const Sidebar = ({ collapsed }) => {
         {collapsed ? 'SB' : 'Sasto Bajar'}
       </div>
       <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
+      <Menu.Item key="0" icon={<DashboardOutlined />}>
+          <Link to="/Dashboard">Dashboard</Link>
+        </Menu.Item>
         <Menu.Item key="1" icon={<HomeOutlined />}>
           <Link to="/">Home</Link>
         </Menu.Item>
@@ -66,6 +73,12 @@ const Sidebar = ({ collapsed }) => {
         </Menu.Item>
         <Menu.Item key="4" icon={<PhoneOutlined />}>
           <Link to="/contact">Contact</Link>
+        </Menu.Item>
+        <Menu.Item key="5" icon={<LoginOutlined/>}>
+          <Link to="/LogIn">LogIn</Link>
+        </Menu.Item>
+        <Menu.Item key="6" icon={<LogoutOutlined/>}>
+          <Link to="/Logout">Logout</Link>
         </Menu.Item>
       </Menu>
     </Sider>
